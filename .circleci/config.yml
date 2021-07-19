@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   node: circleci/node@1.1
-  jest: blimmer/jest@0.2.1
+
 jobs:
   build:
     executor:
@@ -12,4 +12,4 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm i jest
-            - run: npm run test
+          - run: npm run test
