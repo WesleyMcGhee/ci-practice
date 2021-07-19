@@ -84,3 +84,10 @@ workflows:
           version: 12.16.0
       - node/test:
           version: 10.19.0
+      - node/test:
+        steps:
+          - checkout
+          - node/with-cache:
+              steps:
+                - run: npm install
+          - run: npm run test
