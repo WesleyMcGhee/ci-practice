@@ -11,5 +11,5 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: npm i jest
-          - run: npm run test
+            - run: npm i
+            - run: npm run test
